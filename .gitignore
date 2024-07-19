@@ -1,0 +1,4 @@
+build/
+dist/
+ElgatoWavePy.egg-info/
+ElgatoWavepy/__pycache__/
