@@ -10,4 +10,4 @@ If a feature is not included, feel free to ask about it. However, please note th
 - Dump Mixers
 
 
-Thanks to @TheLtWilson for sharing his code! :)
+Thanks to [@TheLtWilson](https://github.com/TheLtWilson) for sharing his code! :)
