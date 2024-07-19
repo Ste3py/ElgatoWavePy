@@ -8,3 +8,6 @@ If a feature is not included, feel free to ask about it. However, please note th
 - Dump Identifier
 - Dump Name
 - Dump Mixers
+
+
+Thanks to @TheLtWilson for sharing his code! :)
