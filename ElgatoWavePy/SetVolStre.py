@@ -25,7 +25,7 @@ def SetVolumeStream(volume: int, websocket_url="ws://127.0.0.1", port="1824"):
     # Créer et exécuter une boucle d'événements
     
     
-    if 0 < volume < 100:
+    if 0 <= volume <= 100:
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         try:
