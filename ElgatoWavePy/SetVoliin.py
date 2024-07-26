@@ -53,7 +53,7 @@ def SetVolumeInput(volume: int, input_id=None, mixer_id=None, websocket_url="ws:
     if input_id is None or mixer_id is None:
         raise ValueError("input Key or Mixer Key Invalid")
     
-    if 0 < volume < 100:
+    if 0 <= volume <= 100:
         # Créer et exécuter une boucle d'événements
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)

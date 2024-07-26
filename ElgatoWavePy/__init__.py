@@ -8,3 +8,4 @@ from .SetMuteOut import SetMuteOutput
 from .SetMuteIn import SetMuteInput
 from .getOutput import dumpOutputs
 from .getConfig import dumpConfigs
+from .getmixer import dumpInputs
