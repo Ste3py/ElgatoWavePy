@@ -6,7 +6,8 @@ setup(
     version='0.1.3',
     packages=find_packages(),
     install_requires=[
-        'websocket-client'
+        'websocket-client',
+        'websockets'
     ],
     author='Steepy12',
     description='Control Elgato WaveLink with Python',
