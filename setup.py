@@ -3,20 +3,20 @@ from setuptools import setup, find_packages
 
 setup(
     name='ElgatoWavePy',
-    version='0.1.4',
+    version='0.1.5',
     packages=find_packages(),
     install_requires=[
         'websocket-client',
         'websockets'
     ],
-    author='Steepy12',
+    author='SteepyTheFrenchMaker',
     description='Control Elgato WaveLink with Python',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/Steepy12/ElgatoWavePy',
+    url='https://github.com/Ste3py/ElgatoWavePy',
     project_urls={
-        'Documentation': 'https://github.com/Steepy12/ElgatoWavePy/wiki',  # URL vers le wiki GitHub
-        'Source': 'https://github.com/Steepy12/ElgatoWavePy',
+        'Documentation': 'https://github.com/Ste3py/ElgatoWavePy/wiki',  # URL vers le wiki GitHub
+        'Source': 'https://github.com/Ste3py/ElgatoWavePy',
     },
     
     
