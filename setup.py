@@ -1,32 +1,48 @@
-
 from setuptools import setup, find_packages
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+README = (ROOT / "README.md").read_text(encoding="utf-8")
 
 setup(
-    name='ElgatoWavePy',
-    version='0.1.5',
-    packages=find_packages(),
+    name="ElgatoWavePy",
+    version="0.1.5",  # ⬅️ bump ici (ou lis depuis __init__ si tu préfères)
+    packages=find_packages(exclude=("tests", "examples")),
     install_requires=[
-        'websocket-client',
-        'websockets'
+        "websockets>=12.0",
     ],
-    author='SteepyTheFrenchMaker',
-    description='Control Elgato WaveLink with Python',
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
-    url='https://github.com/Ste3py/ElgatoWavePy',
+    author="SteepyTheFrenchMaker",
+    description="Control Elgato Wave Link (2.0.6+) volumes/outputs via WebSocket.",
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/Ste3py/ElgatoWavePy",
     project_urls={
-        'Documentation': 'https://github.com/Ste3py/ElgatoWavePy/wiki',  # URL vers le wiki GitHub
-        'Source': 'https://github.com/Ste3py/ElgatoWavePy',
+        "Documentation": "https://github.com/Ste3py/ElgatoWavePy/wiki",
+        "Source": "https://github.com/Ste3py/ElgatoWavePy",
+        "Issues": "https://github.com/Ste3py/ElgatoWavePy/issues",
     },
-    
-    
-    
-    
-    
+    license="MIT",
+    license_files=("LICENSE",),
+    python_requires=">=3.9",
     classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Topic :: Multimedia :: Sound/Audio",
     ],
-    python_requires='>=3.6',
+    # (optionnel) expose des petites commandes
+    entry_points={
+        "console_scripts": [
+            "wave-set-input=ElgatoWavePy.SetVoliin:cli",
+            "wave-set-main=ElgatoWavePy.main_output_volume:cli",
+            "wave-set-out=ElgatoWavePy.SetOutputDevice:cli",
+        ]
+    },
+    zip_safe=False,
 )
