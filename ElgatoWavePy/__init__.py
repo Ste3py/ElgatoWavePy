@@ -1,11 +1,13 @@
 # PyWaveLink/__init__.py
 
-from .SetVolLoc import SetVolumeLocal
-from .SetVolStre import SetVolumeStream
 from .SetOutputDevice import SetOutput
-from .SetVoliin import SetVolumeInput
+from .SetVolIn import SetVolumeInput
 from .SetMuteOut import SetMuteOutput
 from .SetMuteIn import SetMuteInput
+from .Mainvolume import SetMainVolume
+from .Mainvolume import SetVolumeLocal
+from .Mainvolume import SetVolumeStream
+
+
 from .getOutput import dumpOutputs
-from .getConfig import dumpConfigs
-from .getmixer import dumpInputs
+from .getConfig import dumpOutputStatus

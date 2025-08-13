@@ -19,7 +19,7 @@ async def async_set_volume_input(websocket_url="ws://127.0.0.1", port="1824"):
         print(response)
 
 
-def dumpConfigs(websocket_url="ws://127.0.0.1", port="1824"):
+def dumpOutputStatus(websocket_url="ws://127.0.0.1", port="1824"):
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     try:
